@@ -1,8 +1,12 @@
 ---
 layout: page
-title: Summary
+title: Résumé
 robots: noindex,nofollow
 ---
+
+#### You can [get the PDF](/assets/résumé.pdf) directly.
+
+## Summary
 
 Highly motivated engineer, good team work ability. I always try to learn new skills and improve myself to solve problems increasingly more challenging. In the past I took part of the Google Summer of Code project, I developed open source software - which requires learners to think analytically, creatively, and collaboratively. (strengthening my self-management skills). In the future I would like to find a work environment where I can test myself every day growing up and having a role of greater responsibility in order to improve, with my skills, people's lives.
 
