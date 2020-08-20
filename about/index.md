@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Résumé
+title: Resume
 robots: noindex,nofollow
 ---
 
-#### You can [get the PDF](/assets/résumé.pdf) directly.
+You can [get the PDF](/assets/resume.pdf) directly.
 
 ## Summary
 
