@@ -6,11 +6,11 @@ tag: life attention productivity
 ---
 Like a tightly written function, I prefer to exit early if no work should be done. So, if you disagree with these definitions and assumptions, now’s a good time to stop reading.
 
-    * Sustainable productivity: The maximum rate of quality work output, without loss to the wellbeing of the developer
-    * Quality work: Software that meets requirements, is valuable to users, is maintainable, and is as bug free as possible
-    * Attention: The limited mental capacity to focus on a task
-    * Sustainable productivity is desired
-    * Attention is essential to sustainable productivity
+   * Sustainable productivity: The maximum rate of quality work output, without loss to the wellbeing of the developer
+   * Quality work: Software that meets requirements, is valuable to users, is maintainable, and is as bug free as possible
+   * Attention: The limited mental capacity to focus on a task
+   * Sustainable productivity is desired
+   * Attention is essential to sustainable productivity
 
 My high-level workflow looks something like this: identify the problem to solve; think on the problem and let ideas percolate; research, discuss, and experiment with these ideas; implement and test the solution; deliver and maintain the solution.
 
@@ -28,15 +28,15 @@ Make your smart phone dumb. My phone has all notifications disabled, except for 
 
 Be an OS minimalist. Apps I use less commonly are a keypress combo away. Given this, my dock has only the apps I use on a daily basis:
 
-    * File system explorer
-    * Internet browser
-    * Terminal
-    * Text editor for front-end code and notes
-    * IDE for back-end code
-    * IDE for database
-    * Visual file differ for version control
-    * Email client
-    * Instant message client
+   * File system explorer
+   * Internet browser
+   * Terminal
+   * Text editor for front-end code and notes 
+   * IDE for back-end code
+   * IDE for database
+   * Visual file differ for version control
+   * Email client 
+   * Instant message client
 
 My desktop alternates between clean and dirty states. Files I’m currently working with live on the desktop. Then they’re filed away into sensible folders when done.
 
@@ -46,10 +46,10 @@ Minimize meetings. Look, I know some things make sense to discuss face to face, 
 
 Finally, use the The Eisenhower Method to categorize your tasks. Imagine a grid of 4 quadrants:
 
-    * Important and Urgent
-    * Important and Not Urgent
-    * Not Important and Urgent
-    * Not Important and Not Urgent
+   * Important and Urgent
+   * Important and Not Urgent
+   * Not Important and Urgent
+   * Not Important and Not Urgent
 
 Important and Urgent tasks have to be dealt with. For me, these are usually major production issues.
 
