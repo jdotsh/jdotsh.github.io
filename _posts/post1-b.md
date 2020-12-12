@@ -1,135 +1,149 @@
 ---
-title: A Beginner's Guide To Understanding Convolutional Neural Networks - Part 2
+title: What I do when a student asks for help
 date: 2020-03-01
 tags:
-  - Convolutional
-  - Neural networks
+  - Learn
   - CNNs
 author: jdotsh
 ---
 
----- layout: post excerpt: ReLUs, Pooling, Dropout...(aka The Fun Stuff) images: - url: /assets/Cover2nd.png --- <link href="https://.github.io/emoji-css/emoji.css" rel="stylesheet"> ![](/assets/Cover2nd.png)
+-
 
-**Introduction**
+For the last three months, I’ve been working at x as a programming coach.
 
-[Link to Part 1](https://adeshpande3.github.io/adeshpande3.github.io/A-Beginner's-Guide-To-Understanding-Convolutional-Neural-Networks/)
+I spend part of my time working with students who have asked me for help. My goal is for the student to learn to learn. To improve my ability to help with this, I wrote down a process that I follow. The process has changed as I’ve learnt more. Here’s the latest version:
+Process
 
-In this post, we’ll go into a lot more of the specifics of ConvNets. **Disclaimer:** Now, I do realize that some of these topics are quite complex and could be made in whole posts by themselves. In an effort to remain concise yet retain comprehensiveness, I will provide links to research papers where the topic is explained in more detail.
+    Map the student’s request for help to one of the underlying problems:
+        No clear problem explanation
+        Want a concrete piece of information
+        Not clear on how to implement a piece of functionality
+        Not clear about how to implement a piece of functionality, and neither am I
+        Want my opinion of their idea
+        Want an intro to a topic
+        A bug they should be able to solve on their own
+        A bug they don’t have the background knowledge to fix on their own
+        A bug for which I can’t predict the likely cause
+        A bug that will take them a long time to fix
+    Apply one of the suggested solutions:
+        Suggest the escalation process
+        Help the student clarify their explanation of their problem
+        Suggest they Google it
+        Suggest the debugging process
+        Suggest reading material
+        Identify and train a developer skill
+        Identify and train a developer behaviour
+        Solve their problem
+    Ask the student for feedback on my help.
 
-##
+Problems underlying a request for help
+The student doesn’t have a clear problem explanation
 
-**Stride and Padding**
+    Maybe suggest they follow the escalation process.
 
-Alright, let’s look back at our good old conv layers. Remember the filters, the receptive fields, the convolving? Good. Now, there are 2 main parameters that we can change to modify the behavior of each layer. After we choose the filter size, we also have to choose the **stride** and the **padding**.
+    Help the student clarify their explanation of their problem.
 
-Stride controls how the filter convolves around the input volume. In the example we had in part 1, the filter convolves around the input volume by shifting one unit at a time. The amount by which the filter shifts is the stride. In that case, the stride was implicitly set at 1\. Stride is normally set in a way so that the output volume is an integer and not a fraction. Let’s look at an example. Let’s imagine a 7 x 7 input volume, a 3 x 3 filter (Disregard the 3<sup>rd</sup> dimension for simplicity), and a stride of 1\. This is the case that we’re accustomed to.
+The student wants a concrete piece of information
 
-![](/assets/Stride1.png)
+    Maybe suggest they follow the escalation process.
 
-Same old, same old, right? See if you can try to guess what will happen to the output volume as the stride increases to 2.
+    Maybe suggest they Google their question.
 
-![](/assets/Stride2.png)
+The student doesn’t know how to implement a piece of functionality
 
-So, as you can see, the receptive field is shifting by 2 units now and the output volume shrinks as well. Notice that if we tried to set our stride to 3, then we’d have issues with spacing and making sure the receptive fields fit on the input volume. Normally, programmers will increase the stride if they want receptive fields to overlap less and if they want smaller spatial dimensions.
+    Maybe suggest they follow the escalation process.
 
-Now, let’s take a look at padding. Before getting into that, let’s think about a scenario. What happens when you apply three 5 x 5 x 3 filters to a 32 x 32 x 3 input volume? The output volume would be 28 x 28 x 3\. Notice that the spatial dimensions decrease. As we keep applying conv layers, the size of the volume will decrease faster than we would like. In the early layers of our network, we want to preserve as much information about the original input volume so that we can extract those low level features. Let’s say we want to apply the same conv layer but we want the output volume to remain 32 x 32 x 3\. To do this, we can apply a zero padding of size 2 to that layer. Zero padding pads the input volume with zeros around the border. If we think about a zero padding of two, then this would result in a 36 x 36 x 3 input volume.
+    Maybe identify and train a developer skill that will help them implement the functionality.
 
-![](/assets/Pad.png)
+    Maybe suggest reading material on a topic that will solve their problem.
 
-If you have a stride of 1 and if you set the size of zero padding to
+The student doesn’t know how to implement a piece of functionality, and neither do I
 
-![](/assets/ZeroPad.png)
+    Maybe suggest they follow the escalation process.
 
-where K is the filter size, then the input and output volume will always have the same spatial dimensions.
+    Identify and train a developer skill.
 
-The formula for calculating the output size for any given conv layer is
+The student wants my opinion on their idea
 
-![](/assets/Output.png)
+    Maybe suggest they follow the escalation process.
 
-where O is the output height/length, W is the input height/length, K is the filter size, P is the padding, and S is the stride.
+    Maybe identify and train a developer skill like fast prototyping or diagramming.
 
-##
+    Maybe identify and train a developer behaviour like reflection.
 
-**Choosing Hyperparameters**
+The student wants an intro to a topic
 
-How do we know how many layers to use, how many conv layers, what are the filter sizes, or the values for stride and padding? These are not trivial questions and there isn’t a set standard that is used by all researchers. This is because the network will largely depend on the type of data that you have. Data can vary by size, complexity of the image, type of image processing task, and more. When looking at your dataset, one way to think about how to choose the hyperparameters is to find the right combination that creates abstractions of the image at a proper scale.
+    Maybe suggest they follow the escalation process.
 
-##
+    Maybe suggest reading material.
 
-**ReLU (Rectified Linear Units) Layers**
+The student has a bug they should be able to solve on their own
 
-After each conv layer, it is convention to apply a nonlinear layer (or **activation layer**) immediately afterward.The purpose of this layer is to introduce nonlinearity to a system that basically has just been computing linear operations during the conv layers (just element wise multiplications and summations).In the past, nonlinear functions like tanh and sigmoid were used, but researchers found out that **ReLU layers** work far better because the network is able to train a lot faster (because of the computational efficiency) without making a significant difference to the accuracy. It also helps to alleviate the vanishing gradient problem, which is the issue where the lower layers of the network train very slowly because the gradient decreases exponentially through the layers (Explaining this might be out of the scope of this post, but see [here](https://en.wikipedia.org/wiki/Vanishing_gradient_problem) and [here](https://www.quora.com/What-is-the-vanishing-gradient-problem) for good descriptions). The ReLU layer applies the function f(x) = max(0, x) to all of the values in the input volume. In basic terms, this layer just changes all the negative activations to 0.This layer increases the nonlinear properties of the model and the overall network without affecting the receptive fields of the conv layer.
+    Maybe suggest they follow the debugging process.
 
-[Paper](http://www.cs.toronto.edu/~fritz/absps/reluICML.pdf) by the great Geoffrey Hinton (aka the father of deep learning).
+The student has a bug they don’t have the background knowledge to fix on their own
 
-##
+    Maybe suggest they follow the escalation process.
 
-**Pooling Layers**
+    Suggest reading material that will provide the background knowledge.
 
-After some ReLU layers, programmers may choose to apply a **pooling layer**. It is also referred to as a downsampling layer. In this category, there are also several layer options, with maxpooling being the most popular. This basically takes a filter (normally of size 2x2) and a stride of the same length. It then applies it to the input volume and outputs the maximum number in every subregion that the filter convolves around.
+The student has a bug for which I can’t predict the likely cause
 
-![](/assets/MaxPool.png)
+    Run through a partly closed debugging process with the student.
 
-Other options for pooling layers are average pooling and L2-norm pooling. The intuitive reasoning behind this layer is that once we know that a specific feature is in the original input volume (there will be a high activation value), its exact location is not as important as its relative location to the other features. As you can imagine, this layer drastically reduces the spatial dimension (the length and the width change but not the depth) of the input volume. This serves two main purposes. The first is that the amount of parameters or weights is reduced by 75%, thus lessening the computation cost. The second is that it will control **overfitting**. This term refers to when a model is so tuned to the training examples that it is not able to generalize well for the validation and test sets. A symptom of overfitting is having a model that gets 100% or 99% on the training set, but only 50% on the test data.
+The student has a bug that will take them a long time to fix
 
-##
+    Solve the student’s problem. Make the process as open as possible.
 
-**Dropout Layers**
+Solutions
+Suggest the escalation process
 
-Now, **dropout layers** have a very specific function in neural networks. In the last section, we discussed the problem of overfitting, where after training, the weights of the network are so tuned to the training examples they are given that the network doesn’t perform well when given new examples. The idea of dropout is simplistic in nature. This layer “drops out” a random set of activations in that layer by setting them to zero. Simple as that. Now, what are the benefits of such a simple and seemingly unnecessary and counterintuitive process? Well, in a way, it forces the network to be redundant. By that I mean the network should be able to provide the right classification or output for a specific example even if some of the activations are dropped out. It makes sure that the network isn’t getting too “fitted” to the training data and thus helps alleviate the overfitting problem. An important note is that this layer is only used during training, and not during test time.
+    Make the student feel held first. Then suggest the escalation process. (This link isn’t publicly accessible, I’m afraid. It points to an internal Makers Academy document. The document describes a process that helps the student help themselves. It suggests: gathering words to describe the problem, Googling, talking to a pair programming partner, and asking on the student Slack channel.)
 
-[Paper](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf) by Geoffrey Hinton.
+Help the student clarify their explanation of their problem
 
-##
+    Maybe ask them questions to clarify their request for help.
 
-**Network in Network Layers**
+    Maybe use 5 whys.
 
-A **network in network** layer refers to a conv layer where a 1 x 1 size filter is used. Now, at first look, you might wonder why this type of layer would even be helpful since receptive fields are normally larger than the space they map to. However, we must remember that these 1x1 convolutions span a certain depth, so we can think of it as a 1 x 1 x N convolution where N is the number of filters applied in the layer. Effectively, this layer is performing a N-D element-wise multiplication where N is the depth of the input volume into the layer.
+Suggest they Google it
 
-[Paper](https://arxiv.org/pdf/1312.4400v3.pdf) by Min Lin.
+    Make the student feel held first. Then suggest they Google their problem.
 
-##
+Suggest the debugging process
 
-**Classification, Localization, Detection, Segmentation**
+    Tighten the loop. This means following the flow of execution to find the line of code that’s causing the bug.
 
-In the example we used in Part 1 of this series, we looked at the task of **image classification**. This is the process of taking an input image and outputting a class number out of a set of categories. However, when we take a task like **object localization**, our job is not only to produce a class label but also a bounding box that describes where the object is in the picture.
+    Get visibility (aka p everywhere). This means using stdout or a debugger to see the current state of the program.
 
-![](/assets/Localization.png)
+Suggest reading material
 
-We also have the task of **object detection**, where localization needs to be done on all of the objects in the image. Therefore, you will have multiple bounding boxes and multiple class labels.
+    Suggest a blog post. Or suggest a pill [an internal document that gives a condensed introduction to a topic].
 
-Finally, we also have **object segmentation** where the task is to output a class label as well as an outline of every object in the input image.
+Identify and train a developer skill
 
-![](/assets/Detection.png)
+For example: diagramming, delegating behaviour, breaking classes into single responsibilities, debugging asynchronous code, 5 whys, falsifying assumptions, following the flow.
 
-More detail on how these are implemented to come in Part 3, but for those who can’t wait…
+    I can identify a skill that’s lacking by looking at how the student makes their request, how they’ve tried to find the problem and what solutions they’ve tried.
 
-Detection/ Localization: [RCNN](https://arxiv.org/pdf/1311.2524v5.pdf), [Fast RCNN](https://arxiv.org/pdf/1504.08083.pdf), [Faster RCNN](http://arxiv.org/pdf/1506.01497v3.pdf), [MultiBox](http://www.cv-foundation.org/openaccess/content_cvpr_2014/papers/Erhan_Scalable_Object_Detection_2014_CVPR_paper.pdf), [Bayesian Optimization](http://web.eecs.umich.edu/~honglak/cvpr15-cnn-detection.pdf), [Multi-region](http://www.cv-foundation.org/openaccess/content_iccv_2015/papers/Gidaris_Object_Detection_via_ICCV_2015_paper.pdf), [RCNN Minus R](http://www.robots.ox.ac.uk/~vedaldi/assets/pubs/lenc15rcnn.pdf), [Image Windows](http://calvin.inf.ed.ac.uk/wp-content/uploads/Publications/alexe12pami.pdf)  
-Segmentation: [Semantic Seg](http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf), [Unconstrained Video](http://calvin.inf.ed.ac.uk/wp-content/uploads/Publications/papazoglouICCV2013-camera-ready.pdf), [Shape Guided](https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/Borenstein06.pdf), [Object Regions](http://crcv.ucf.edu/papers/cvpr2013/VideoObjectSegmentation.pdf), [Shape Sharing](http://www.cs.utexas.edu/~grauman/papers/shape-sharing-ECCV2012.pdf)
+    To set the student’s expectations, name the skill I’m going to help them train. Suggest they employ the skill to solve the problem. Name the skill at the end of the session to help them remember to use it.
 
-Yeah, there’s a lot more.
+    Figure out how open the process should be. Maybe the first time that I suggest diagramming, I’ll need to walk the student through it. But, in the future, I should be able to give less detailed support.
 
-##
+Identify and train a developer behaviour
 
-**Transfer Learning**
+    For example, one of the XP values.
 
-Now, a common misconception in the DL community is that without a Google-esque amount of data, you can’t possibly hope to create effective deep learning models. While data is a critical part of creating the network, the idea of transfer learning has helped to lessen the data demands. **Transfer learning** is the process of taking a pre-trained model (the weights and parameters of a network that has been trained on a large dataset by somebody else) and “fine-tuning” the model with your own dataset. The idea is that this pre-trained model will act as a feature extractor. You will remove the last layer of the network and replace it with your own classifier (depending on what your problem space is). You then freeze the weights of all the other layers and train the network normally (Freezing the layers means not changing the weights during gradient descent/optimization).
+Solve their problem
 
-Let’s investigate why this works. Let’s say the pre-trained model that we’re talking about was trained on ImageNet (For those that aren’t familiar, ImageNet is a dataset that contains 14 million images with over 1,000 classes). When we think about the lower layers of the network, we know that they will detect features like edges and curves. Now, unless you have a very unique problem space and dataset, your network is going to need to detect curves and edges as well. Rather than training the whole network through a random initialization of weights, we can use the weights of the pre-trained model (and freeze them) and focus on the more important layers (ones that are higher up) for training. If your dataset is quite different than something like ImageNet, then you’d want to train more of your layers and freeze only a couple of the low layers.
+    If the student has a really tricky problem that will delay them for a long time, it’s often better to just solve it for them so they can get going again. Whilst keeping the process efficient, try and make it as open as possible. Try and explain how I know to try the things I’m trying.
 
-[Paper](https://arxiv.org/pdf/1411.1792v1.pdf) by Yoshua Bengio (another deep learning pioneer).  
-[Paper](http://arxiv.org/pdf/1403.6382.pdf) by Ali Sharif Razavian.  
-[Paper](https://arxiv.org/pdf/1310.1531.pdf) by Jeff Donahue.  
-[Paper](https://arxiv.org/pdf/1705.07706.pdf) and [subsequent paper](https://arxiv.org/pdf/1707.09872.pdf) by Dario Garcia-Gasulla.
+Definitions
+Feeling held
 
-##
+    Reassure the student that I’ve heard and understood their request. Reassure the student that I care about them and their request. This may involve explaining why I’m not giving them the answer.
 
-**Data Augmentation Techniques**
+Open process (vs closed)
 
-By now, we’re all probably numb to the importance of data in ConvNets, so let’s talk about ways that you can make your existing dataset even larger, just with a couple easy transformations. Like we’ve mentioned before, when a computer takes an image as an input, it will take in an array of pixel values. Let’s say that the whole image is shifted left by 1 pixel. To you and me, this change is imperceptible. However, to a computer, this shift can be fairly significant as the classification or label of the image doesn’t change, while the array does. Approaches that alter the training data in ways that change the array representation while keeping the label the same are known as **data augmentation** techniques. They are a way to artificially expand your dataset. Some popular augmentations people use are grayscales, horizontal flips, vertical flips, random crops, color jitters, translations, rotations, and much more. By applying just a couple of these transformations to your training data, you can easily double or triple the number of training examples.
+    An open process is one that helps the student to learn more than a closed process. For example, letting the student type, rather than typing myself, or saying “can you use the filter function for that?” rather than “type dot f i l t e r …”.
 
-[Link to Part 3](https://adeshpande3.github.io/adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html)
-
-Dueces.
-
-[Sources](/assets/Sources2.txt)[Tweet](https://twitter.com/share) <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1\*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-80811190-1', 'auto'); ga('send', 'pageview');</script>
