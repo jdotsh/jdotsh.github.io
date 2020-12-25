@@ -4,7 +4,7 @@ title: Resume
 robots: noindex,nofollow
 ---
 
-You can [get the PDF](/assets/resume.pdf) directly.
+You can get the PDF(/assets/resume.pdf) directly.
 
 ## Summary
 
