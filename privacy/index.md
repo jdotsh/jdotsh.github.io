@@ -14,7 +14,7 @@ Via Maria Montessori<br />
 63837 Falerone<br />
 Italy</p>
 
-<p>Telephone: +39 327 2066718<br />
+<p>Telephone: redacted for privacy <br />
 Email: privacy@sherollari.it</p>
  <p>The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data (names, email addresses, etc.).</p>
 <h3>SSL or TLS encryption</h3> <p>This site uses SSL or TLS encryption for security reasons and for the protection of the transmission of all content. You can recognize an encrypted connection in your browser's address line when it changes from "http://" to "https://" and the lock icon is displayed in your browser's address bar.</p> <p>If SSL or TLS encryption is activated, the data you transfer to us cannot be read by third parties.</p>
