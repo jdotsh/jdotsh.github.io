@@ -1,4 +1,4 @@
-### Personal space, where you can read about what I do (Jekyll based personal website).
+### Personal space, where you can read about what I do (Jekyll based website).
 
 <!-- GETTING STARTED -->
 ## Getting Started
