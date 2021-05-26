@@ -20,7 +20,7 @@ description: Computer & Automation Enginieer studied at the Marche Polytechnic U
 author:
   name: Julian Sherollari
   pronunciation: "['dʒuːljən ˈʃerəllari]"
-  profession: Software Enginieer
+  profession: Software Engineer
   social:
     - name: LinkedIn
       icon: fa-linkedin
@@ -36,7 +36,6 @@ author:
       url: "mailto:julian@sherollari.it"
       notarget: true
   skills:
-    - "#javascript"
     - "#c++"
     - "#python"
     - "#machinelearning"
