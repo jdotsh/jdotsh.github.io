@@ -58,7 +58,7 @@ My self-motivation and passion for engineering always makes me seek for outstand
 ## Technical Skills
 
 - Programming languages: Matlab/Simulink, Python, LaTex, QT/C++, QML, JSON, Git.
-- Collaboration tools: Google Suite, MS Office Suite, Codereview, Slack, GitHub and Trello
+- Collaboration tools: Google Suite, MS Office 365, Codereview, Slack, GitHub and Trello
 
 ## Languages and Communications
 
