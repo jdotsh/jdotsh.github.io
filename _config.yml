@@ -27,7 +27,7 @@ author:
       url: https://www.linkedin.com/in/jdotsh
     - name: Twitter
       icon: fa-twitter
-      url: https://twitter.com/JSherollari
+      url: https://twitter.com/jsherollari
     - name: Github
       icon: fa-github-alt
       url: https://github.com/jdotsh
@@ -36,10 +36,7 @@ author:
       url: "mailto:julian@sherollari.it"
       notarget: true
   skills:
-    - "#c++"
-    - "#python"
-    - "#machinelearning"
-    - "ai"
+Technology Optimist, graduated in Computer and Automation Engineering at Marche Polytechnic University (Marche, Italy), semester abroad at Augsburg University of Applied Sciences (Bayern, Germany), intern at The Qt Company (Oslo, Norway) during the Google Summer of Code program. I’m currently a MSc student in Artificial Intelligence at University of Bologna, studying things like Neural Networks, Computer Vision, Deep Learning, Reinforcement Learning and the mathematics behind these.
 
   twitter: JCCMMS
   github: jdotsh
