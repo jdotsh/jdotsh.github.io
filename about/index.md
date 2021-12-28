@@ -8,9 +8,13 @@ You can get the PDF(/assets/resume.pdf) directly.
 
 ## Summary
 
-Highly motivated engineer, good team work ability. I always try to learn new skills and improve myself to solve problems increasingly more challenging. In the past I took part of the Google Summer of Code project, I developed open source software - which requires learners to think analytically, creatively, and collaboratively. (strengthening my self-management skills). In the future I would like to find a work environment where I can test myself every day growing up and having a role of greater responsibility in order to improve, with my skills, people’s lives.
+Highly motivated engineer, graduated in Computer and Automation Engineering at Marche Polytechnic University (Marche, Italy), semester abroad at Augsburg University of Applied Sciences (Bayern, Germany), intern at The Qt Company (Oslo, Norway) during the Google Summer of Code program. 
+
+I am a prospective graduate of MSc in Artificial Intelligence at Università di Bologna. I came from strong theoretical background in all the basic fields of Engineering (Mathematics, Electronics, Computer Science and Systems Theory).
 
 My self-motivation and passion for engineering always makes me seek for outstanding results in my professional career as well as in my hobbies.
+
+In the past I took part of the Google Summer of Code project, I developed open source software - which requires learners to think analytically, creatively, and collaboratively. (strengthening my self-management skills). In the future I would like to find a work environment where I can test myself every day growing up and having a role of greater responsibility in order to improve, with my skills, people’s lives. 
 
 ## Education
 
@@ -26,6 +30,13 @@ My self-motivation and passion for engineering always makes me seek for outstand
 **Relevant coursework:** Linear Algebra and Geometry, Mathematics 1, Mathematics 2, Algorithm and data structures, Numerical Analysis, Fundamentals of Computer Science, Fundamentals of Automatics, Object-Oriented Programming (C++), Computer system and networks, Robotics and Automation Technologies, Operating systems.
 
 ## Work Experience
+
+**Consultant Software Engineer** ( --  Capgemini, Paris, France ) <span class="right"> 2018.08 - 2019.02</span><br>
+
+- Developed class for exporting geographic data from Qt framework to GeoJSON (RFC7946).
+- Contributed the development of the framework, that include: detailed user documentation, examples and autotests (available since Qt 5.13).
+- Built Qt application for use cases and debugging purpose.
+- [List of publications](https://codereview.qt-project.org/q/owner:%22Julian+Sherollari%22+)
 
 **Open Source Developer** ( -- Independent ) <span class="right"> 2018.08 - 2019.02</span><br>
 
@@ -63,7 +74,7 @@ My self-motivation and passion for engineering always makes me seek for outstand
 ## Languages and Communications
 
 - Native: Italian, Albanian
-- Full professional proficiency: English
+- Full professional proficiency: English, French
 - Elementary proficiency: German, Chinese.
 
 ## Extra Curricular Activities
