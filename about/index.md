@@ -14,7 +14,7 @@ I am a prospective graduate of MSc in Artificial Intelligence at Università di 
 
 My self-motivation and passion for engineering always makes me seek for outstanding results in my professional career as well as in my hobbies.
 
-In the past I took part of the Google Summer of Code project, I developed open source software - which requires learners to think analytically, creatively, and collaboratively. (strengthening my self-management skills). In the future I would like to find a work environment where I can test myself every day growing up and having a role of greater responsibility in order to improve, with my skills, people’s lives. 
+In the past I took part of the Google Summer of Code project, I developed open source software - which requires learners to think analytically, creatively, and collaboratively. In the future I would like to find a work environment where I can test myself every day growing up and having a role of greater responsibility in order to improve, with my skills, people’s lives. 
 
 ## Education
 
