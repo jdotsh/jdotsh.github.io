@@ -17,7 +17,7 @@ My self-motivation and passion for engineering always makes me seek for outstand
 ## Education
 
 - **Master's in Computer Science and Engineering - Artificial Intelligence**\
-  [Alma Mater Studiorum – Università di Bologna](https://www.unibo.it/en/homepage), Bologna, Italy <span class="right"> 2020 . 10 - Present</span><br>
+  [Alma Mater Studiorum – Università di Bologna](https://www.unibo.it/en/homepage), Bologna, Italy <div style="text-align: right"> 2020 . 10 - Present </div>
 
 - **Bachelor of Computing and Automation Engineering**\
   [Università Politecnica delle Marche](https://www.univpm.it/Entra/Universita_Politecnica_delle_Marche_Home/L/1), Ancona, Italy <span class="right"> 2015 . 10 - 2019 . 12</span><br>
@@ -76,4 +76,4 @@ My self-motivation and passion for engineering always makes me seek for outstand
 
 - Foreign Languages
 - Sports (tennis, football, skiing/snowboarding)
-- Cooking (Pasta lover since birth! <3) 
+- Cooking (Pasta lover since birth!) 
