@@ -31,12 +31,9 @@ In the past I took part of the Google Summer of Code project, I developed open s
 
 ## Work Experience
 
-**Consultant Software Engineer** ( --  Capgemini, Paris, France ) <span class="right"> 2018.08 - 2019.02</span><br>
+**Consultant Software Engineer** ( --  Capgemini, Paris, France ) <span class="right"> 2021.10 - Present</span><br>
 
-- Developed class for exporting geographic data from Qt framework to GeoJSON (RFC7946).
-- Contributed the development of the framework, that include: detailed user documentation, examples and autotests (available since Qt 5.13).
-- Built Qt application for use cases and debugging purpose.
-- [List of publications](https://codereview.qt-project.org/q/owner:%22Julian+Sherollari%22+)
+- AI/RPA consutant
 
 **Open Source Developer** ( -- Independent ) <span class="right"> 2018.08 - 2019.02</span><br>
 
