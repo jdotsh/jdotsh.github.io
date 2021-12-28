@@ -77,5 +77,5 @@ In the past I took part of the Google Summer of Code project, I developed open s
 ## Extra Curricular Activities
 
 - Foreign Languages
-- Studying Abroad
 - Sports (tennis, football, skiing/snowboarding)
+- Cooking (Pasta lover since birth! <3) 
