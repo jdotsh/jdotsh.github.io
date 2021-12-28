@@ -17,10 +17,10 @@ My self-motivation and passion for engineering always makes me seek for outstand
 ## Education
 
 - **Master's in Computer Science and Engineering - Artificial Intelligence**\
-  [Alma Mater Studiorum – Università di Bologna](https://www.unibo.it/en/homepage), Bologna, Italy <span class="right">2020 . 10 - Present</span><br>
+  [Alma Mater Studiorum – Università di Bologna](https://www.unibo.it/en/homepage), Bologna, Italy <span class="right"> 2020 . 10 - Present</span><br>
 
 - **Bachelor of Computing and Automation Engineering**\
-  [Università Politecnica delle Marche](https://www.univpm.it/Entra/Universita_Politecnica_delle_Marche_Home/L/1), Ancona, Italy <span class="right">2015.10 - 2020.02</span><br>
+  [Università Politecnica delle Marche](https://www.univpm.it/Entra/Universita_Politecnica_delle_Marche_Home/L/1), Ancona, Italy <span class="right"> 2015 . 10 - 2019 . 12</span><br>
 
 - **European Exchange Program**\
   [Augsburg University of Applied Sciences](https://www.hs-augsburg.de/en/), Augsburg, Germany <span class="right">2019 . 03 - 2019 . 09</span>
@@ -50,11 +50,11 @@ My self-motivation and passion for engineering always makes me seek for outstand
 
 ## Projects
 
-**Kalman Filter and Deep Learning Algorithms for SoC Estimation**<span class="role"></span> <span class="right">2019 . 03 - 2019 . 07</span><br>
+**Kalman Filter and Deep Learning Algorithms for SoC Estimation**<span class="role"></span> <span class="right"> 2019 . 03 - 2019 . 07</span><br>
 
 - This project focused on assessment of three methods State Of Charge (SOC) estimation for Lithium-Ion battery in terms of Extended Kalman Filter (EKF), Artificial Neural Network (ANN) and Open-Circuit Voltage (OCV) **(Matlab/Simulink, LaTex, Microsoft Office)**.
 
-**Computational complexity in Algorithms for Solving Linear Systems**<span class="role"></span><span class="right">2018 . 03 - 2018 . 07</span><br>
+**Computational complexity in Algorithms for Solving Linear Systems**<span class="role"></span><span class="right"> 2018 . 03 - 2018 . 07</span><br>
 
 - The project aimed to develop and analyze the main algorithms for solving system of linear equations. In particular was focused in Gauss–Seidel, Jacobi (iterative methods) and Gauss Elimination (direct method) **(C++, Linux, LaTex)**.
 - [Source Code](https://github.com/jdotsh/linear-system-solver)
